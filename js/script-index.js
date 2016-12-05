@@ -1,9 +1,6 @@
 $(document).ready( function(){
 	$(".js-back").hide();
 
-	function printNews(){
-		$(".callout-news > p").text("NUEVAS RECETAS");
-	}
 
 	printNews();
 
@@ -12,6 +9,12 @@ $(document).ready( function(){
 
 });
 
+/*
+// Función que escribe en el P 
+*/
+	function printNews(){
+		$(".callout-news > p").text("NUEVAS RECETAS");
+	}
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
@@ -19,6 +22,13 @@ $(document).ready( function(){
 */
 function renderHighlightedRecipes(recipesArray) {
 	console.log('Recipes: ', recipesArray);
+	var arreglo = recipesArray.length;
+	for (var i = 0; i <= arreglo; i++){
+		var receta = recipesArray[i]
+		if (receta.highlighted == true){
+			renderRecipe(receta);
+		}
+	}
 }
 
 /*

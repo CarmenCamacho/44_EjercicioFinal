@@ -1053,6 +1053,7 @@ nav .nav-group.right {
   overflow: hidden;
   position: relative;
   width: 50%;
+  
 }
 .item-recipe .attribution {
   position: absolute;
@@ -1116,11 +1117,13 @@ nav .nav-group.right {
   font-size: 80%;
   vertical-align: middle;
 }
-.item-recipe img {
+.item-recipe img{
   display: block;
-  height: auto;
   width: 100%;
-}
+  height: auto; 
+  object-fit: cover;
+   }
+
 .item-recipe.highlighted {
   width: 100%;
 }

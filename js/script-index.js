@@ -17,12 +17,14 @@ $(document).ready( function(){
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activities) {
-	for (var i = 0; i <= activities.length ; i++){
+	for (var i = 0; i < activities.length ; i++){
+		renderActivity(activities[i]);
 		console.log('Activity: ' + i, activities);
 	}
 	if (activities.length > 0){
 		$(".wrapper-message").hide();
 	}
+
 }
 
 /*
@@ -91,8 +93,25 @@ $(".list-recipes").append(item);
 * Aqui se tiene que crear el HTML que esta en el 
 * archivo "templates/templates-activity.html"
 */
-function renderActivity(recipe) {
-	
+function renderActivity(actividad) {
+	 var template =
+    '<a href="#" class="item-activity">'+
+      '<span class="attribution">'+ 
+      	'<span class="avatar">'+   
+      		'<img src="<%= userAvatar %>" class="image-avatar">'+
+      	'</span>'+ 
+      	'<span class="meta">'+ 
+       		'<span class="author"><%= userName %></span>'+
+       		'<span class="recipe"><%= recipeName %></span>'+
+       		'<span class="location"><%= place %></span>'+
+      	'</span>'+
+      '</span>'+ 
+      '<div class="bg-image" style="background-image: url(<%= image %>)"></div>' +
+    '</a>';
+  
+  var compiled= _.template(template);
+  var compilado=compiled(actividad);
+$(".list-activities").append(compilado);
 }
 
 

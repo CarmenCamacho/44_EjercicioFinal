@@ -17,7 +17,9 @@ $(document).ready( function(){
 * Función que se encarga de pintar todas las actividades
 */
 function renderActivities(activities) {
-	console.log('Activities: ', activities);
+	for (var i = 0; i <= activities.length ; i++){
+		console.log('Activity: ' + i, activities);
+	}
 	if (activities.length > 0){
 		$(".wrapper-message").hide();
 	}

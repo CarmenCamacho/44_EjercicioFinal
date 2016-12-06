@@ -87,7 +87,6 @@ $(".list-recipes").append(item);
 
 
 
-
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 

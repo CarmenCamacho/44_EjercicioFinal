@@ -25,21 +25,6 @@ $(document).ready( function(){
 
 
 
-  var template =
-    '<a href="#" class="item-activity">'+
-      '<span class="attribution">'+ 
-      	'<span class="avatar">'+   
-      		'<img src="<%= activities.userAvatar %>">'+
-      	'</span>'+ 
-      	'<span class="meta">'+ 
-       		'<span class="author"><%= activities.UserName%></span>'+
-       		'<span class="recipe"><%= activities.recipeName%></span>'+
-       		'<span class="location"><%= activities.place%></span>'+
-      	'</span>'+
-      '</span>'+ 
-    '</a>';
-  
-  var compiled=_.template(template);
 
 
 
